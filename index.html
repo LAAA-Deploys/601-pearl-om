@@ -187,24 +187,50 @@
 
   <!-- 1 — COVER ------------------------------------------------------- -->
   <section data-label="01 Cover">
-    <div class="cover" style="display:grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 0;">
-      <div style="display:flex; flex-direction:column; padding: 96px 80px 96px 120px;">
-        <div class="top">
-          <span>Offering Memorandum / 2026</span>
-          <span>Confidential</span>
-        </div>
-        <div class="mid" style="flex:1;">
-          <div class="kicker">601 Pearl Street · Ojai, CA 93023</div>
-          <h1>Entitled<br/>9-home<br/>development<br/>in downtown Ojai.</h1>
-          <div class="sub">A fully entitled, fully platted small-lot subdivision steps from the Ojai Avenue Arcade.</div>
-        </div>
-        <div class="bottom">
-          <span>Ojai · CA · 93023</span>
-          <span>Tract No. 5964 · 10 Recorded Lots</span>
-        </div>
+    <div style="position:absolute; inset:0; background:#000; overflow:hidden;">
+      <img src="images/rendering.jpg" alt="Hero rendering of 601 Pearl Street development" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position: center center;"/>
+
+      <!-- Top thin overlay: file marker + confidential -->
+      <div style="position:absolute; left:0; right:0; top:0; padding: 56px 110px 0;
+                  display:flex; justify-content:space-between; align-items:baseline;
+                  font-family: var(--mono); font-size: 22px; letter-spacing: 0.22em; text-transform: uppercase;
+                  color: rgba(255,255,255,0.85);
+                  text-shadow: 0 2px 12px rgba(0,0,0,0.55);">
+        <span>Offering Memorandum / 2026</span>
+        <span>Confidential</span>
       </div>
-      <div style="position:relative; overflow:hidden;">
-        <img src="images/aerial-cover-sunny.jpg" alt="Aerial view of 601 Pearl Street, Ojai" style="width:100%; height:100%; object-fit:cover; object-position: center 55%;"/>
+
+      <!-- Bottom band: project info + address -->
+      <div style="position:absolute; left:0; right:0; bottom:0;
+                  background: linear-gradient(to top, rgba(14,31,51,0.94) 35%, rgba(14,31,51,0.65) 75%, rgba(14,31,51,0));
+                  padding: 140px 110px 80px; color: var(--paper);">
+        <div style="font-family: var(--mono); color: var(--accent-soft); letter-spacing: 0.24em; font-size: 22px; text-transform:uppercase; margin-bottom: 28px;">
+          601 Pearl Street · Ojai, California
+        </div>
+        <h1 style="font-family: var(--serif); font-weight: 300; font-size: 132px; line-height: 0.96; margin: 0; letter-spacing: -0.02em; font-variation-settings: 'opsz' 144; max-width: 1500px; color: var(--paper);">
+          Entitled 9-home<br/>development in<br/>downtown Ojai.
+        </h1>
+
+        <div style="margin-top: 64px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.22);
+                    display:grid; grid-template-columns: repeat(4, 1fr); gap: 48px; align-items:flex-end;">
+          <div>
+            <div style="font-family: var(--mono); font-size: 18px; letter-spacing: 0.2em; text-transform: uppercase; color: #9bb0cc; margin-bottom: 10px;">Address</div>
+            <div style="font-family: var(--serif); font-weight: 300; font-size: 28px; line-height: 1.2; color: var(--paper);">601 Pearl Street<br/>Ojai, CA 93023</div>
+          </div>
+          <div>
+            <div style="font-family: var(--mono); font-size: 18px; letter-spacing: 0.2em; text-transform: uppercase; color: #9bb0cc; margin-bottom: 10px;">Program</div>
+            <div style="font-family: var(--serif); font-weight: 300; font-size: 28px; line-height: 1.2; color: var(--paper);">9 detached homes<br/>±1,835 SF under roof</div>
+          </div>
+          <div>
+            <div style="font-family: var(--mono); font-size: 18px; letter-spacing: 0.2em; text-transform: uppercase; color: #9bb0cc; margin-bottom: 10px;">Status</div>
+            <div style="font-family: var(--serif); font-weight: 300; font-size: 28px; line-height: 1.2; color: var(--paper);">Tract No. 5964<br/>10 recorded lots</div>
+          </div>
+          <div>
+            <div style="font-family: var(--mono); font-size: 18px; letter-spacing: 0.2em; text-transform: uppercase; color: #9bb0cc; margin-bottom: 10px;">List Price</div>
+            <div style="font-family: var(--serif); font-weight: 300; font-size: 40px; line-height: 1.05; color: var(--gold); letter-spacing: -0.01em;">$3,700,000</div>
+            <div style="font-family: var(--mono); font-size: 18px; color: #c5d2e3; margin-top: 6px; letter-spacing: 0.04em;">$411,111 / home</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
