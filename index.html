@@ -186,39 +186,44 @@
 <deck-stage width="1920" height="1080">
 
   <!-- 1 — COVER ------------------------------------------------------- -->
+  <!-- Cover layout locked 2026-05-21: explicit navy header bar + image
+       middle + navy footer band (renders consistently regardless of cover
+       image aspect ratio). -->
   <section data-label="01 Cover">
-    <div style="position:absolute; inset:0; background:#000; overflow:hidden;">
-      <img src="images/cover.jpg" alt="601 Pearl Street cover rendering" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position: center center;"/>
+    <div style="position:absolute; inset:0; background:var(--ink); display:flex; flex-direction:column; overflow:hidden;">
 
-      <!-- Top thin overlay: file marker + confidential -->
-      <div style="position:absolute; left:0; right:0; top:0; padding: 56px 110px 0;
-                  display:flex; justify-content:space-between; align-items:baseline;
+      <!-- HEADER BAR — fixed navy strip -->
+      <div style="height: 140px; padding: 48px 110px 0; box-sizing:border-box;
+                  display:flex; justify-content:space-between; align-items:flex-start;
                   font-family: var(--mono); font-size: 22px; letter-spacing: 0.22em; text-transform: uppercase;
-                  color: rgba(255,255,255,0.85);
-                  text-shadow: 0 2px 12px rgba(0,0,0,0.55);">
-        <span>Offering Memorandum / 2026</span>
+                  color: rgba(255,255,255,0.92);
+                  background: var(--ink);">
+        <div style="display:flex; flex-direction:column; gap: 10px;">
+          <span>Offering Memorandum / 2026</span>
+          <span style="font-size: 18px; letter-spacing: 0.22em; color: rgba(197,162,88,0.95);">Entitled 9-Home Subdivision · Downtown Ojai</span>
+        </div>
         <span>Confidential</span>
       </div>
 
-      <!-- Conceptual Rendering corner label -->
-      <div style="position:absolute; right: 110px; bottom: 240px;
-                  font-family: var(--mono); font-size: 16px; letter-spacing: 0.22em; text-transform: uppercase;
-                  color: rgba(255,255,255,0.92);
-                  background: rgba(14,31,51,0.55);
-                  padding: 8px 14px;
-                  border-left: 2px solid var(--gold);">
-        Conceptual Rendering
+      <!-- IMAGE AREA — fills middle -->
+      <div style="flex:1; min-height:0; position:relative; background:var(--ink); overflow:hidden;">
+        <img src="images/cover.jpg" alt="601 Pearl Street cover rendering" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position: center center;"/>
+        <!-- Conceptual Rendering corner label — flush to bottom-right edge of image area -->
+        <div style="position:absolute; right: 0; bottom: 0; z-index: 5;
+                    font-family: var(--mono); font-size: 16px; letter-spacing: 0.22em; text-transform: uppercase;
+                    color: rgba(255,255,255,0.92);
+                    background: rgba(14,31,51,0.65);
+                    padding: 8px 14px;
+                    border-left: 2px solid var(--gold);">
+          Conceptual Rendering
+        </div>
       </div>
 
-      <!-- Bottom band: project info + address (very slim, faint gradient) -->
-      <div style="position:absolute; left:0; right:0; bottom:0;
-                  background: linear-gradient(to top, rgba(14,31,51,0.70), rgba(14,31,51,0.30) 60%, rgba(14,31,51,0));
-                  padding: 32px 110px 36px; color: var(--paper);">
-        <div style="font-family: var(--mono); color: var(--accent-soft); letter-spacing: 0.24em; font-size: 20px; text-transform:uppercase; margin-bottom: 18px;">
-          601 Pearl Street · Ojai, California
-        </div>
-        <div style="padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.22);
-                    display:grid; grid-template-columns: repeat(3, 1fr); gap: 48px; align-items:flex-end;">
+      <!-- FOOTER BAND — Address / Status / List Price -->
+      <div style="height: 180px; padding: 32px 110px 36px; box-sizing:border-box;
+                  background: var(--ink); color: var(--paper);
+                  border-top: 1px solid rgba(255,255,255,0.18);">
+        <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 48px; align-items:flex-end; height:100%;">
           <div>
             <div style="font-family: var(--mono); font-size: 16px; letter-spacing: 0.2em; text-transform: uppercase; color: #9bb0cc; margin-bottom: 8px;">Address</div>
             <div style="font-family: var(--serif); font-weight: 300; font-size: 24px; line-height: 1.2; color: var(--paper);">601 Pearl Street · Ojai, CA 93023</div>
